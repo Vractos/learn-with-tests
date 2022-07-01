@@ -6,8 +6,13 @@ func Hello() string {
 	return "Hello, world"
 }
 
+const englishHelloPrefix = "Hello, "
+
 func HelloTDD(name string) string {
-	return "Hello, " + name
+	if name == "" {
+		name = "World"
+	}
+	return englishHelloPrefix + name
 }
 
 func main() {
